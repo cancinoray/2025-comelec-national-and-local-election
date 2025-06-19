@@ -1,0 +1,86 @@
+[
+  {
+    "name": "precinct_id",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Unique identifier for each precinct"
+  },
+  {
+    "name": "machine_id",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Voting machine identifier"
+  },
+  {
+    "name": "region",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Philippine region"
+  },
+  {
+    "name": "province",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Province name"
+  },
+  {
+    "name": "municipality",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Municipality or city name"
+  },
+  {
+    "name": "barangay",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Barangay name"
+  },
+  {
+    "name": "voting_center",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Voting center location"
+  },
+  {
+    "name": "precinct_in_cluster",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Precinct cluster information"
+  },
+  {
+    "name": "registered_voters",
+    "type": "INTEGER",
+    "mode": "REQUIRED",
+    "description": "Number of registered voters"
+  },
+  {
+    "name": "actual_voters",
+    "type": "INTEGER",
+    "mode": "REQUIRED",
+    "description": "Number of actual voters"
+  },
+  {
+    "name": "valid_ballots",
+    "type": "INTEGER",
+    "mode": "REQUIRED",
+    "description": "Number of valid ballots"
+  },
+  {
+    "name": "turnout_percentage",
+    "type": "FLOAT",
+    "mode": "REQUIRED",
+    "description": "Voter turnout percentage"
+  },
+  {
+    "name": "abstentions",
+    "type": "INTEGER",
+    "mode": "NULLABLE",
+    "description": "Number of abstentions"
+  },
+  {
+    "name": "total_er_received",
+    "type": "FLOAT",
+    "mode": "NULLABLE",
+    "description": "Total election returns received percentage"
+  }
+]

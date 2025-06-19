@@ -1,0 +1,70 @@
+version: 2
+
+sources:
+  - name: philippines_election_2025
+    description: Raw election data from COMELEC 2025
+    tables:
+      - name: election_results
+        description: Detailed election results by precinct and candidate
+        columns:
+          - name: precinct_id
+            description: Unique identifier for each precinct
+            tests:
+              - not_null
+          - name: contest_code
+            description: Code identifying the specific contest/position
+            tests:
+              - not_null
+          - name: candidate_name
+            description: Name of the candidate
+            tests:
+              - not_null
+          - name: votes
+            description: Number of votes received
+            tests:
+              - not_null
+              - dbt_utils.accepted_range:
+                  min_value: 0
+
+      - name: precincts
+        description: Precinct information and voter turnout data
+        columns:
+          - name: precinct_id
+            description: Unique identifier for each precinct
+            tests:
+              - not_null
+              - unique
+          - name: region
+            description: Philippine region
+            tests:
+              - not_null
+          - name: registered_voters
+            description: Number of registered voters in the precinct
+            tests:
+              - not_null
+              - dbt_utils.accepted_range:
+                  min_value: 0
+
+      - name: municipal_barangay_tally
+        description: Vote tallies aggregated by municipality and barangay
+        
+      - name: provincial_municipal_tally
+        description: Vote tallies aggregated by province and municipality
+        
+      - name: regional_vote_tally
+        description: Vote tallies aggregated by region
+        
+      - name: contest_stats
+        description: Statistics about each contest/position
+        
+      - name: overseas_results
+        description: Election results from overseas voting
+        
+      - name: barangay_summary
+        description: Summary statistics by barangay
+        
+      - name: municipal_summary
+        description: Summary statistics by municipality
+        
+      - name: provincial_summary
+        description: Summary statistics by province

@@ -1,0 +1,74 @@
+[
+  {
+    "name": "precinct_id",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Unique identifier for each precinct"
+  },
+  {
+    "name": "contest_code",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Code identifying the specific contest/position"
+  },
+  {
+    "name": "contest_name",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Name of the contest/position"
+  },
+  {
+    "name": "candidate_name",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Name of the candidate"
+  },
+  {
+    "name": "party",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Political party affiliation"
+  },
+  {
+    "name": "votes",
+    "type": "INTEGER",
+    "mode": "REQUIRED",
+    "description": "Number of votes received"
+  },
+  {
+    "name": "percentage",
+    "type": "FLOAT",
+    "mode": "REQUIRED",
+    "description": "Percentage of votes in the precinct"
+  },
+  {
+    "name": "election_level",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Level of election (national, regional, local)"
+  },
+  {
+    "name": "over_votes",
+    "type": "INTEGER",
+    "mode": "NULLABLE",
+    "description": "Number of over votes"
+  },
+  {
+    "name": "under_votes",
+    "type": "INTEGER",
+    "mode": "NULLABLE",
+    "description": "Number of under votes"
+  },
+  {
+    "name": "valid_votes",
+    "type": "INTEGER",
+    "mode": "NULLABLE",
+    "description": "Number of valid votes"
+  },
+  {
+    "name": "obtained_votes",
+    "type": "INTEGER",
+    "mode": "NULLABLE",
+    "description": "Total votes obtained"
+  }
+]

@@ -1,11 +1,79 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
 env/
-env
+venv/
+ENV/
+env.bak/
+venv.bak/
 
-logs
-logs/
-
-log
-log/
-
+# Virtual environments
 .env
-*.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+log/
+*.log
+
+# Data files (large datasets)
+election_data/
+election_data_overseas/
+csv_datasets/
+processed_data/
+*.csv
+*.json
+!terraform/schemas/*.json
+
+# GCP credentials
+gcp-credentials/
+*.json
+!terraform/schemas/*.json
+service-account-key.json
+
+# dbt
+dbt_election_analytics/target/
+dbt_election_analytics/dbt_packages/
+dbt_election_analytics/logs/
+
+# Terraform
+terraform/*.tfstate
+terraform/*.tfstate.*
+terraform/*.tfvars
+!terraform/*.tfvars.example
+terraform/.terraform/
+terraform/.terraform.lock.hcl
+terraform/tfplan
+
+# Analysis outputs
+analysis_output/
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.html
+
+# Backup files
+*.backup
+*.bak
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
